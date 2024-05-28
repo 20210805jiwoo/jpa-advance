@@ -111,10 +111,12 @@ public class ManyToOneTest {
         food2.setName("아보카도 피자");
         food2.setPrice(50000);
 //        food2.setUser(user); // 외래 키(연관 관계) 설정
+
         userRepository.save(user);
         foodRepository.save(food);
         foodRepository.save(food2);
     }
+
 
     @Test
     @DisplayName("N대1 조회 : Food 기준 user 정보 조회")
